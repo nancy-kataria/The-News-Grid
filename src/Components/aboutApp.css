@@ -1,0 +1,19 @@
+#main-nav ul li.current{
+    background: var(--primary-color);
+    color: #fff;
+  }
+  
+  #main-nav ul li.secondary{
+    background: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  #main-nav ul li.current:hover{
+    background: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  #main-nav ul li.secondary:hover{
+    background: var(--dark-color);
+    color: var(--light-color);
+  }
