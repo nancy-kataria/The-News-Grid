@@ -8,7 +8,7 @@ import Business from './Business'
 import Sports from './Sports'
 import Entertainment from './Entertainment'
 import Technology from './Technology'
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
   return (
