@@ -24,16 +24,16 @@ function Footer() {
                 <div>
                     <h3>Site links</h3>
                     <ul className='list'>
-                        <li><a href='#'>Help & Support</a></li>
-                        <li><a href='#'>Privacy Policy</a></li>
-                        <li><a href='#'>About Us</a></li>
-                        <li><a href='#'>Contact</a></li>
+                        <li>Help & Support</li>
+                        <li>Privacy Policy</li>
+                        <li>About Us</li>
+                        <li>Contact</li>
                     </ul>
                 </div>
                 <div>
                     <h2>Join Our Club</h2>
                     <p>It's free and only takes a minute.</p>
-                    <a href='#' className='btn btn-secondary'>Join Now</a>
+                    <button className='btn btn-secondary'>Join Now</button>
                 </div>
                 <div>
                     <p>Copyright &copy; 2021, All Rights Reserved</p>

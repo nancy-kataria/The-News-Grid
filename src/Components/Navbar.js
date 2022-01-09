@@ -11,7 +11,7 @@ function Navbar() {
     return (
         <nav id = 'main-nav'>
             <div className='container'>
-                <Link style={navStyle} to='/'>
+                <Link to='/' style={navStyle}>
                 <img src={logo} alt="NewsGrid" className='logo' />
                 </Link>    
                 <div className="social">
@@ -29,27 +29,27 @@ function Navbar() {
                     </a>
                 </div>
                 <ul>
-                    <Link style={navStyle} to='/'>
-                    <li><a href='#' className='current'>HOME</a></li>
+                    <Link to='/' style={navStyle}>
+                    <li className='current'>HOME</li>
                     </Link>
-                    <Link style={navStyle} to='/about'>
-                    <li><a href='#'>ABOUT</a></li>
+                    <Link to='/about' style={navStyle}>
+                    <li>ABOUT</li>
                     </Link>
                 </ul>
             </div>
             <div className='category-container'>
                 <ul>
                     <Link to='/businessNews'>
-                    <li><a href='#' >Business</a></li>
+                    <li>Business</li>
                     </Link>
                     <Link to='/sportsNews'>
-                    <li><a href='#'>Sports</a></li>
+                    <li>Sports</li>
                     </Link>
                     <Link to='/entertainmentNews'>
-                    <li><a href='#'>Entertainment</a></li>
+                    <li>Entertainment</li>
                     </Link>
                     <Link to='/technologyNews'>
-                    <li><a href='#'>Technology</a></li>
+                    <li>Technology</li>
                     </Link>
                 </ul>
             </div>

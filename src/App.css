@@ -177,17 +177,17 @@ h1, h2, h3, h4, h5, h6{
   display: flex;
 }
 
-#main-nav ul li a{
+#main-nav ul li{
   padding: 0.75rem;
   font-weight: bold;
 }
 
-#main-nav ul li a.current{
+#main-nav ul li.current{
   background: var(--primary-color);
   color: #fff;
 }
 
-#main-nav ul li a:hover{
+#main-nav ul li:hover{
   background: var(--light-color);
   color: var(--dark-color);
 }
@@ -209,7 +209,7 @@ h1, h2, h3, h4, h5, h6{
   padding: 0 5rem 0.4rem;
 }
 
-#main-nav .category-container ul li a{
+#main-nav .category-container ul li{
   padding: 0.3rem 0.5rem;
 }
 
