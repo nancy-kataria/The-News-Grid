@@ -35,7 +35,7 @@ function About() {
                     <aside className='card bg-primary'>
                         <h2>Join Our Club</h2>
                         <p>It's free and only takes a minute.</p>
-                        <a href='#' className='btn btn-dark btn-block'>Join Now</a>
+                        <button className='btn btn-dark btn-block'>Join Now</button>
                     </aside>
                 </div>
             </div>

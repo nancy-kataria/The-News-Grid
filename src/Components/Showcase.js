@@ -1,17 +1,24 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import axios from 'axios'
 
 function Showcase() {
 
     const [items, setItems] = useState([])
     useEffect(() => {
-        const fetchItems = async () => {
-            const data = await fetch('https://newsapi.org/v2/top-headlines?country=in&category=sports&apiKey=7fb8837d50d14a26b59aefa20c8d43fb')
-            const items = await data.json();
-            console.log(items);
-            setItems(items.articles);
-        }
-        fetchItems()
+        axios
+        .get(`https://api.newscatcherapi.com/v2/latest_headlines?countries=US,CA,IN&topic=world&sources=nytimes.com,theguardian.com&page_size=1`, {
+            headers: {
+              'x-api-key': 'QPunDyFLCyvXkfiRFW_PCSasmCOCm1HORbLiC5t33ow'
+            }
+           })
+        .then((res)=>{
+            setItems(res.data.articles)
+            // console.log(res)
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
     }, [])
 
     return (
@@ -20,14 +27,14 @@ function Showcase() {
                 <div className='showcase-container'>
                     <div className='showcase-content'>
                         {
-                            items[4] ? (
+                            items[0] ? (
                                 <>
-                                    <Link to='/sportsNews'>
-                                        <div className='category category-sports'>Sports</div>
+                                    <Link to='/worldNews'>
+                                        <div className='category category-sports'>World</div>
                                     </Link>
-                                    <h1>{items[4].title}</h1>
-                                    <p>{items[4].content}</p>
-                                    <a href={items[4].url} target='_blank' className='btn btn-primary' rel="noreferrer">Read More</a>
+                                    <h1>{items[0].title}</h1>
+                                    <p>{items[0].summary.slice(0,150)}...</p>
+                                    <a href={items[0].link} target='_blank' className='btn btn-primary' rel="noreferrer">Read More</a>
                                 </>
                             ): null
                         }

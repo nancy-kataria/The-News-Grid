@@ -8,6 +8,7 @@ import Business from './Business'
 import Sports from './Sports'
 import Entertainment from './Entertainment'
 import Technology from './Technology'
+import World from './World'
 import { HashRouter as Router, Routes, Route } from "react-router-dom"
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/worldNews' element={<World />} />
           <Route path='/businessNews' element={<Business />} />
           <Route path='/sportsNews' element={<Sports />} />
           <Route path='/entertainmentNews' element={<Entertainment />} />

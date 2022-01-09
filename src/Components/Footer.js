@@ -4,7 +4,7 @@ import React from 'react'
 function Footer() {
     return (
         <footer id='main-footer'>
-            <div class='container footer-container'>
+            <div className='container footer-container'>
                 <div>
                     <img src={logo} alt='website-logo'></img>
                     <p>

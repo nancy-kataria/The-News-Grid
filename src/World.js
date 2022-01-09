@@ -1,12 +1,11 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
-function Technology() {
-
+function World() {
     const [items, setItems] = useState([])
-    useEffect(()=>{
+    useEffect(() => {
         axios
-        .get(`https://api.newscatcherapi.com/v2/latest_headlines?countries=US,CA,IN&topic=tech&sources=nytimes.com,theguardian.com&page_size=15`, {
+        .get(`https://api.newscatcherapi.com/v2/latest_headlines?countries=US,CA,IN&topic=world&sources=nytimes.com,theguardian.com&page_size=15`, {
             headers: {
               'x-api-key': 'QPunDyFLCyvXkfiRFW_PCSasmCOCm1HORbLiC5t33ow'
             }
@@ -22,7 +21,7 @@ function Technology() {
 
     return (
         <div className='API-container'>
-            <h1>Technology News</h1>
+            <h1>World News</h1>
             {items.map(article => (
                 <div className='box' key={Math.random()}>
                 <img src={article.media} alt={`technology-${article.published_date}`}></img>
@@ -38,4 +37,4 @@ function Technology() {
     )
 }
 
-export default Technology
+export default World
